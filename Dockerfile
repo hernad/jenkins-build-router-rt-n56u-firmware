@@ -20,6 +20,7 @@ RUN apt-get clean all && \
                         libmpc-dev \
                         git \
                         sudo \
+                        module-init-tools \
                         vim && \
     apt-get -y purge manpages \
                      xauth \
