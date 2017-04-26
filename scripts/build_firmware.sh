@@ -8,7 +8,7 @@ KERNEL_DIR=$TRUNK_DIR/linux-3.4.x
 cd $KERNEL_DIR
 make savedefconfig 
 cp -av .config /opt/rt-n56u/kernel_default_config
-
+make distclean
 
 cd $TRUNK_DIR
 
