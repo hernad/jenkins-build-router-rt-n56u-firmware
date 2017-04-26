@@ -8,8 +8,9 @@ else
 fi
 
 
-cd /opt/rt-n56u/trunk/linux-3.4.x
-make oldconfig
+KERNEL_DIR=/opt/rt-n56u/trunk/linux-3.4.x
+echo ------- kernel config /kernel.config -------------------
+cp /kernel.config  $KERNEL_DIR/.config
 
 cd /
 scripts/build_firmware.sh
