@@ -18,8 +18,8 @@ if [ -f kernel.config ] ; then
   cp /kernel.config configs/boards/RT-N56U/kernel-3.4.x.config 
 fi
 
-cd $KERNEL_DIR
-make distclean
+#cd $KERNEL_DIR
+#make distclean
 
 
 cd $TRUNK_DIR
