@@ -6,7 +6,7 @@ VOLUME_BASE=$(pwd)
 
 sudo mkdir -p $VOLUME_BASE/rt-n56u
 
-docker rm -f fwbuilder
+docker rm -f fwbuilder-1
 
 vol_2=""
 
@@ -16,7 +16,7 @@ fi
    
 docker run \
    -t --rm \
-   --name fwbuilder \
+   --name fwbuilder-1 \
    -v $VOLUME_BASE/rt-n56u:/opt/rt-n56u \
    -v $(pwd)/build.sh /build.sh \
    -v $(pwd)/scripts:/scripts \
