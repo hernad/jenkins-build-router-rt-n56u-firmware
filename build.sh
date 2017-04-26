@@ -10,7 +10,6 @@ fi
 
 KERNEL_DIR=/opt/rt-n56u/trunk/linux-3.4.x
 echo ------- kernel config /kernel.config -------------------
-#cp /kernel.config  $KERNEL_DIR/.config
 
 cd $KERNEL_DIR
 make distclean
@@ -25,6 +24,7 @@ cp -av .config /opt/rt-n56u/kernel_default_config
 
 touch include/config/auto.conf
 
+cp /kernel.config  $KERNEL_DIR/.config
 
 cd /
 scripts/build_firmware.sh
