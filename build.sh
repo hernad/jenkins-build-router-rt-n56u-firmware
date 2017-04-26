@@ -17,5 +17,14 @@ make distclean
 make savedefconfig 
 cp -av .config /opt/rt-n56u/kernel_default_config
 
+#/opt/rt-n56u/trunk/linux-3.4.x/scripts/kconfig/Makefile:33: recipe for target 'silentoldconfig' failed
+#make[3]: *** [silentoldconfig] Error 1
+#/opt/rt-n56u/trunk/linux-3.4.x/Makefile:489: recipe for target 'silentoldconfig' failed
+#make[2]: *** [silentoldconfig] Error 2
+#make[1]: *** No rule to make target 'include/config/auto.conf', needed by 'include/config/kernel.release'.  Stop.
+
+touch include/config/auto.conf
+
+
 cd /
 scripts/build_firmware.sh
