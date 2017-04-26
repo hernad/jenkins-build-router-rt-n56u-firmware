@@ -34,14 +34,14 @@ sed -i -e 's/CONFIG_FIRMWARE_PRODUCT_ID="RT-N65U"/CONFIG_FIRMWARE_PRODUCT_ID="RT
 #sed -e 's/make/echo dummy 2/' my_build_firmware -i
 #. ./my_build_firmware
 
-./clean_tree
+./clear_tree
 
 
-cd ./libs/libiconv/libiconv-1.13.1
-make
-make install
+#cd ./libs/libiconv/libiconv-1.13.1
+#make
+#make install
 
-cd $TRUNKDIR
+#cd $TRUNKDIR
 
 ./build_firmware
 
