@@ -22,9 +22,10 @@ cp -av .config /opt/rt-n56u/kernel_default_config
 #make[2]: *** [silentoldconfig] Error 2
 #make[1]: *** No rule to make target 'include/config/auto.conf', needed by 'include/config/kernel.release'.  Stop.
 
-touch include/config/auto.conf
+#touch include/config/auto.conf
 
 cp /kernel.config  $KERNEL_DIR/.config
+make oldconfig
 
 cd /
 scripts/build_firmware.sh
