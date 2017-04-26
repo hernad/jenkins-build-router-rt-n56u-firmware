@@ -26,12 +26,12 @@ fi
 #sed -e 's/make/echo dummy 2/' my_build_firmware -i
 
 #. ./my_build_firmware
-./build_firmware
 
 func_enable_kernel_param "CONFIG_NET_IPIP"
 #func_enable_kernel_param "CONFIG_NET_IPGRE_BROADCAST"
 func_enable_kernel_param "CONFIG_NET_IPGRE"
 
-make dep
-make
+./build_firmware
+#make dep
+#make
 

@@ -10,7 +10,3 @@ fi
 
 scripts/build_firmware.sh
 
-
-cd $KERNEL_DIR
-yes "" | make oldconfig
-
