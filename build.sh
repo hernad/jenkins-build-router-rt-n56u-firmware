@@ -13,7 +13,7 @@ echo ------- kernel config /kernel.config -------------------
 #cp /kernel.config  $KERNEL_DIR/.config
 
 cd $KERNEL_DIR
-make linux-savedefconfig
+make savedefconfig 
 cp -av .config /opt/rt-n56u/kernel_default_config
 
 cd /
