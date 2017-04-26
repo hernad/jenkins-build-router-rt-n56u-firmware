@@ -15,7 +15,7 @@ if [ -f $(pwd)/kernel.config ] ; then
 fi
    
 docker run \
-   -t --rm \
+   --rm \
    --name fwbuilder-1 \
    -v $VOLUME_BASE/rt-n56u:/opt/rt-n56u \
    -v $(pwd)/build.sh:/build.sh \
