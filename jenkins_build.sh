@@ -15,12 +15,10 @@ if [ -f $(pwd)/kernel.config ] ; then
 fi
    
 docker run \
-   -t \
    --name fwbuilder \
    -v $VOLUME_BASE/rt-n56u:/opt/rt-n56u \
    $vol_2 \
-   fwbuilder \
-   /start.sh
+   fwbuilder /start.sh
 
 docker -t exec fwbuilder  /build_toolchain.sh
 
