@@ -29,7 +29,8 @@ fi
 
 cd $KERNEL_DIR
 make distclean
-cd /
+
+cd $TRUNK_DIR
 ./build_firmware
 
 #func_enable_kernel_param "CONFIG_NET_IPIP"
