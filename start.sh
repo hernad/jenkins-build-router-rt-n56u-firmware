@@ -1,11 +1,10 @@
 #!/bin/bash
 
-if [ ! -d /opt/rt-n56u/trunk ] ; then
-   git init /opt/rt-n56u
-   git remote add origin https://bitbucket.org/padavan/rt-n56u.git
-   git pull origin master
+if [ ! -d /opt/source/rt-n56u ] ; then
+   git clone https://bitbucket.org/padavan/rt-n56u.git
 else
-   cd /opt/rt-n56u
+   cd /opt/source/rt-n56u
    git pull
+   git checkout -f
 fi
    

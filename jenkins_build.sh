@@ -4,7 +4,7 @@ VOLUME_BASE=$(pwd)
 
 ./build_docker_image.sh
 
-sudo mkdir -p $VOLUME_BASE/rt-n56u
+sudo mkdir -p $VOLUME_BASE/source
 
 docker rm -f fwbuilder
 
@@ -17,7 +17,7 @@ fi
 docker run \
    -t \
    --name fwbuilder \
-   -v $VOLUME_BASE/rt-n56u:/opt/rt-n56u \
+   -v $VOLUME_BASE/source:/opt/source \
    $vol_2 \
    fwbuilder /start.sh
 
