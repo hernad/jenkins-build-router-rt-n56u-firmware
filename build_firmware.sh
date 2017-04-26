@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo ========= build-firmware =====================
 
 cd /opt/rt-n56u/trunk
 
