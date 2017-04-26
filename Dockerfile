@@ -30,7 +30,7 @@ RUN apt-get clean all && \
     apt-get clean all
 
 
-VOLUME /opt/source
+VOLUME /opt/rt-n56u
 
 ADD start.sh /start.sh
 ADD build_toolchain.sh /build_toolchain.sh
