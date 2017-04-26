@@ -2,6 +2,8 @@
 
 VOLUME_BASE=$(pwd)
 
+./build_docker_image.sh
+
 sudo mkdir -p $VOLUME_BASE/rt-n56u
 
 docker rm -f fwbuilder
