@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ls -l /opt/rt-n56u
+
 if [ ! -d /opt/rt-n56u/trunk ] ; then
    cd /opt/rt-n56u
    git init
