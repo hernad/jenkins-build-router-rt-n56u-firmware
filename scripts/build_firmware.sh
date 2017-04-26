@@ -27,11 +27,12 @@ fi
 
 #. ./my_build_firmware
 
+. ./build_firmware
+
 func_enable_kernel_param "CONFIG_NET_IPIP"
 #func_enable_kernel_param "CONFIG_NET_IPGRE_BROADCAST"
 func_enable_kernel_param "CONFIG_NET_IPGRE"
 
-./build_firmware
-#make dep
-#make
+make dep
+make
 
