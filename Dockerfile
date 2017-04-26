@@ -32,8 +32,4 @@ RUN apt-get clean all && \
 
 VOLUME /opt/rt-n56u
 
-ADD start.sh /start.sh
-ADD build_toolchain.sh /build_toolchain.sh
-ADD build_firmware.sh /build_firmware.sh
-RUN chmod +x /*.sh
 
