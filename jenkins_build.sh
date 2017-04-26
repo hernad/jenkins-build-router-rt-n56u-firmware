@@ -24,5 +24,5 @@ docker run \
    fwbuilder /build.sh
 
 
-cp -av rt-n56u/trunk/images/RT-N56U_3.4*.trx ../RT-N56U_3.4_$(date +"%y-%m-%d").trx
+cp -av rt-n56u/trunk/images/RT-N56U_3.4*.trx RT-N56U_3.4_$(date +"%Y-%M-%d").trx
 
