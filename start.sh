@@ -8,7 +8,7 @@ if [ ! -d /opt/rt-n56u/trunk ] ; then
    git merge upstream/master
    
 else
-   cd /opt/source/rt-n56u
+   cd /opt/rt-n56u
    git checkout -f master
    git pull
 fi
