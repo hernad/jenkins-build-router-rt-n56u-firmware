@@ -25,8 +25,8 @@ fi
 cd $TRUNK_DIR
 cp -av build_firmware my_build_firmware
 
-sed -e 's/make dep/echo dummy 1/' my_build_firmware -i
-sed -e 's/make/echo dummy 2/' my_build_firmware -i
+#sed -e 's/make dep/echo dummy 1/' my_build_firmware -i
+#sed -e 's/make/echo dummy 2/' my_build_firmware -i
 . ./my_build_firmware
 
 
