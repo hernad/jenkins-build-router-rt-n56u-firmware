@@ -10,8 +10,11 @@ fi
 
 KERNEL_DIR=/opt/rt-n56u/trunk/linux-3.4.x
 echo ------- kernel config /kernel.config -------------------
-cp /kernel.config  $KERNEL_DIR/.config
+#cp /kernel.config  $KERNEL_DIR/.config
+
+cd $KERNEL_DIR
+make linux-savedefconfig
+cp -av .config /opt/rt-n56u/kernel_default_config
 
 cd /
 scripts/build_firmware.sh
-
