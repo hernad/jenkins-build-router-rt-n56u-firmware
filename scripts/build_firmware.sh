@@ -18,25 +18,22 @@ if [ -f kernel.config ] ; then
   cp /kernel.config configs/boards/RT-N56U/kernel-3.4.x.config 
 fi
 
-
-#cp build_firmware my_build_firmware
-
-#sed -e 's/make dep/echo dummy 1/' my_build_firmware -i
-#sed -e 's/make/echo dummy 2/' my_build_firmware -i
-
-#. ./my_build_firmware
-
-
 cd $KERNEL_DIR
 make distclean
 
+
 cd $TRUNK_DIR
-./build_firmware
+cp -av build_firmware my_build_firmware
 
-#func_enable_kernel_param "CONFIG_NET_IPIP"
-#func_enable_kernel_param "CONFIG_NET_IPGRE_BROADCAST"
-#func_enable_kernel_param "CONFIG_NET_IPGRE"
+sed -e 's/make dep/echo dummy 1/' my_build_firmware -i
+sed -e 's/make/echo dummy 2/' my_build_firmware -i
+. ./my_build_firmware
 
-#make dep
-#make
+
+func_enable_kernel_param "CONFIG_NET_IPIP"
+func_enable_kernel_param "CONFIG_NET_IPGRE_BROADCAST"
+func_enable_kernel_param "CONFIG_NET_IPGRE"
+
+make dep
+make
 
