@@ -34,6 +34,7 @@ func_enable_kernel_param "CONFIG_NET_IPIP"
 func_enable_kernel_param "CONFIG_NET_IPGRE_BROADCAST"
 func_enable_kernel_param "CONFIG_NET_IPGRE"
 
+yes "" | make oldconfig
 make dep
 make
 
