@@ -12,6 +12,7 @@ if [ ! -d /opt/rt-n56u/trunk ] ; then
 else
    cd /opt/rt-n56u
    git checkout -f master
-   git pull
+   git fetch upstream
+   git merge upstream/master
 fi
    
