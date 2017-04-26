@@ -35,6 +35,14 @@ sed -i -e 's/CONFIG_FIRMWARE_PRODUCT_ID="RT-N65U"/CONFIG_FIRMWARE_PRODUCT_ID="RT
 #. ./my_build_firmware
 
 ./clean_tree
+
+
+cd ./libs/libiconv/libiconv-1.13.1
+make
+make install
+
+cd $TRUNKDIR
+
 ./build_firmware
 
 #func_enable_kernel_param "CONFIG_NET_IPIP"
