@@ -25,7 +25,11 @@ cp -av .config /opt/rt-n56u/kernel_default_config
 #touch include/config/auto.conf
 
 cp /kernel.config  $KERNEL_DIR/.config
-yes "" | make oldconfig
 
 cd /
 scripts/build_firmware.sh
+
+
+cd $KERNEL_DIR
+yes "" | make oldconfig
+
