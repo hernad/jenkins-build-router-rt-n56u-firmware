@@ -20,7 +20,9 @@ docker run \
    $vol_2 \
    -t \
    fwbuilder  /
-   /build_toolchain.sh
+   ./start.sh
+
+docker exec -t fwbuilder  /build_toolchain.sh
 
 docker exec -t fwbuilder /build_firmware.sh
 

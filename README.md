@@ -5,7 +5,7 @@
 
 Run docker container:
 
-     run_fwbuilder.sh
+     ./jenkins_build.sh
 
 
 In docker container:
