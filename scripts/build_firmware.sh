@@ -23,21 +23,28 @@ fi
 
 
 cd $TRUNK_DIR
-cp -av build_firmware my_build_firmware
+
+cat .config
+
+sed -i -e 's/CONFIG_FIRMWARE_PRODUCT_ID="RT-N65U"/CONFIG_FIRMWARE_PRODUCT_ID="RT-N65U-GREEN"/' .config
+
+#cp -av build_firmware my_build_firmware
 
 #sed -e 's/make dep/echo dummy 1/' my_build_firmware -i
 #sed -e 's/make/echo dummy 2/' my_build_firmware -i
-. ./my_build_firmware
+#. ./my_build_firmware
 
+./clean_tree
+./build_firmware
 
-func_enable_kernel_param "CONFIG_NET_IPIP"
-func_enable_kernel_param "CONFIG_NET_IPGRE_BROADCAST"
-func_enable_kernel_param "CONFIG_NET_IPGRE"
+#func_enable_kernel_param "CONFIG_NET_IPIP"
+#func_enable_kernel_param "CONFIG_NET_IPGRE_BROADCAST"
+#func_enable_kernel_param "CONFIG_NET_IPGRE"
 
-cd $KERNEL_DIR
-yes "" | make oldconfig
+#cd $KERNEL_DIR
+#yes "" | make oldconfig
 
-cd $TRUNK_DIR
-make dep
-make
+#cd $TRUNK_DIR
+#make dep
+#make
 
