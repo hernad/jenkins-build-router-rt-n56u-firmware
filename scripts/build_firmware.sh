@@ -8,7 +8,6 @@ KERNEL_DIR=$TRUNK_DIR/linux-3.4.x
 cd $KERNEL_DIR
 make savedefconfig 
 cp -av .config /opt/rt-n56u/kernel_default_config
-#make distclean
 
 cd $TRUNK_DIR
 
@@ -27,12 +26,16 @@ fi
 
 #. ./my_build_firmware
 
-. ./build_firmware
 
-func_enable_kernel_param "CONFIG_NET_IPIP"
-func_enable_kernel_param "CONFIG_NET_IPGRE_BROADCAST"
-func_enable_kernel_param "CONFIG_NET_IPGRE"
+cd $KERNEL_DIR
+make distclean
+cd /
+./build_firmware
 
-make dep
-make
+#func_enable_kernel_param "CONFIG_NET_IPIP"
+#func_enable_kernel_param "CONFIG_NET_IPGRE_BROADCAST"
+#func_enable_kernel_param "CONFIG_NET_IPGRE"
+
+#make dep
+#make
 
