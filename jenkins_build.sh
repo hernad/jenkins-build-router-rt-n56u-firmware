@@ -18,7 +18,7 @@ docker run \
    -t --rm \
    --name fwbuilder-1 \
    -v $VOLUME_BASE/rt-n56u:/opt/rt-n56u \
-   -v $(pwd)/build.sh /build.sh \
+   -v $(pwd)/build.sh:/build.sh \
    -v $(pwd)/scripts:/scripts \
    $vol_2 \
    fwbuilder /build.sh
