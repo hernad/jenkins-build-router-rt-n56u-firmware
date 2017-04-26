@@ -35,6 +35,7 @@ func_enable_kernel_param "CONFIG_NET_IPGRE_BROADCAST"
 func_enable_kernel_param "CONFIG_NET_IPGRE"
 
 cd $KERNEL_DIR
+make distclean
 yes "" | make oldconfig
 
 cd $TRUNK_DIR
