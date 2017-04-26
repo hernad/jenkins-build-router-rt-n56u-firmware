@@ -1,8 +1,6 @@
 #!/bin/bash
 
-#sudo zfs create green/fwbuilder -o mountpoint=/data/fwbuilder
-
-VOLUME_BASE=/data/fwbuilder
+VOLUME_BASE=$(pwd)
 
 sudo mkdir -p $VOLUME_BASE/rt-n56u
 
@@ -16,7 +14,11 @@ fi
    
 docker run \
    --name fwbuilder \
-   -v $VOLUME_BASE/rt-n56u:/opt/rt-n56u $vol_2 \
-   -it \
-   fwbuilder  /bin/bash
+   -v $VOLUME_BASE/rt-n56u:/opt/rt-n56u \
+   $vol_2 \
+   -t \
+   fwbuilder  /
+   /build_toolchain.sh
+
+docker exec -t fwbuilder /build_firmware.sh
 
